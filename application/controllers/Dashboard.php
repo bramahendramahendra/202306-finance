@@ -5,6 +5,10 @@ class Dashboard extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('dashboard_v');
+		// data view components 
+		$dataView = array();
+		$dataView["titleWebsite"] = "Dashboard";
+		$dataView["titlePage"] = "Dashboard";
+		$this->templates_l->load('dashboard_v', $dataView);
 	}
 }
